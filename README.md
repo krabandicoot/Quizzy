@@ -13,7 +13,7 @@ A small quizz WebApp to try out your knowledge. ReactJS
 
 The quizz isn't done to see the development product you can check out the preview here
 
-[Deployment link](lemon-quizzy.netlify.app)
+[Deployment link](https://lemon-quizzy.netlify.app)
 
 ## Run the project 
 
