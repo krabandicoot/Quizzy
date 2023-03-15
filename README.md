@@ -9,7 +9,13 @@ A small quizz WebApp to try out your knowledge. ReactJS
 
 - ReactJS
 
+## Deployment
+
+The quizz isn't done to see the development product you can check out the preview here
+
+[Deployment link](lemon-quizzy.netlify.app)
+
 ## Run the project 
 
 ``git clone git@github.com:krabandicoot/Quizzy.git``
-``cd  ./app  && npm i && npm run dev``
+``cd  ./app  && npm i && npm run build && npm run dev``
