@@ -9,7 +9,7 @@ const QuizCard = ({ startTimer, setName }) => {
     const [score, setScore] = useState(0);
     const [displayScore, setDisplayScore] = useState(false);
     const [clickedAnswer, setclickedAnswer] = useState(0);
-    const [seconds, setSeconds] = useState(20);
+    const [seconds, setSeconds] = useState(10);
 
     const navigate = useNavigate();
 
@@ -25,9 +25,19 @@ const QuizCard = ({ startTimer, setName }) => {
             setDisplayScore(true);
             }
             if (selected === true) {
-            setScore((score) => score + 1);
+            setScore((score) => {
+                if( seconds >= 8){
+                    return score + 200;
+                }
+                else if (seconds >= 5){
+                    return score + 100;
+                }
+                else if (seconds > 0){
+                    return score + 50; 
+                }
+            });
             }
-            setSeconds(20);
+            setSeconds(10);
     }, 600);
     };
 
@@ -37,7 +47,7 @@ const QuizCard = ({ startTimer, setName }) => {
         {displayScore ? (
             <>
             <p className="text-2xl font-bold m-4 text-white">
-                Your score : {score} / {quizQuestions.length}
+                Your score : {score}
             </p>
             <div className="grid grid-cols-2">
                 <button
